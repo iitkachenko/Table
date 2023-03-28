@@ -1,0 +1,168 @@
+:root {
+    --bg-blue: #9fb7b9;
+    --bg-light-blue: #ececec;
+    --bg-dark-wheat: #d8caa2;
+    --bg-wheat: #feb;
+    --bg-green: #b3c783;
+    --bg-primary: #612c69;
+    --bg-primary-hover: #43194a;
+    --bg-success: #245a18;
+    --bg-success-hover: #194010;
+    --bg-success-disabled: #536f4c;
+    --bg-default: #0621af;
+    --bg-default-hover: #051986;
+    --bg-danger: #ad272c;
+    --bg-danger-hover: #821f23;
+    --color-white: #fff;
+}
+
+.app-table * {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.app-table table {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+.app-table th,
+.app-table td {
+    border: 1px solid black;
+    padding: .5em 1em;
+}
+
+.app-table th {
+    background: var(--bg-blue);
+}
+
+.app-table tr {
+    background: var(--bg-dark-wheat);
+}
+
+.app-table tr:nth-child(even) {
+    background: var(--bg-wheat);
+}
+
+.app-table tr:hover {
+    background: var(--bg-green);
+    cursor: pointer;
+}
+
+/*buttons*/
+.btn-group {
+    display: flex;
+    gap: 1em;
+}
+
+.app-table .btn {
+    font-size: .9rem;
+    font-weight: bold;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 3px;
+    color: var(--color-white);
+    background: var(--bg-default);
+    cursor: pointer;
+}
+
+.app-table .btn:hover {
+    background: var(--bg-default-hover);
+}
+
+.app-table .btn-add {
+    background: var(--bg-primary);
+}
+
+.app-table .btn-add:hover {
+    background: var(--bg-primary-hover);
+}
+
+.app-table .btn-confirm,
+.app-table .btn-save {
+    background: var(--bg-success);
+}
+
+.app-table .btn-confirm:hover,
+.app-table .btn-save:hover {
+    background: var(--bg-success-hover);
+}
+
+.app-table .btn:disabled {
+    background: var(--bg-success-disabled);
+    cursor: not-allowed;
+}
+
+.app-table .btn-close {
+    margin: 5px 5px 1em auto;
+    padding: .3em .5em .25em;
+    font-size: 1em;
+}
+
+.app-table .btn-remove {
+    background: var(--bg-danger);
+}
+
+.app-table .btn-remove:hover {
+    background: var(--bg-danger-hover);
+}
+
+/*inputs*/
+.app-table input {
+    font-size: .9em;
+    outline: 1px transparent;
+    padding: .5em;
+}
+
+.app-table input:focus-visible {
+    border: 2px solid var(--bg-success);
+}
+
+/*popup*/
+.app-table .popup-wrapper {
+    background-color: #000d;
+    /* height: 100vh;
+    height: 100dvh; */
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-table .popup {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-light-blue);
+    padding-bottom: 2em;
+}
+
+.app-table .popup-table {
+    margin: 1em 2em;
+}
+
+.app-table .popup th,
+.app-table .popup td {
+    cursor: default;
+}
+
+.app-table .popup input {
+    width: 100%;
+}
+
+.app-table .popup .btn-group {
+    margin: 0 auto;
+}
+
+.app-table .popup td {
+    background: var(--bg-dark-wheat);
+}
+
+.app-table .popup td:hover, .app-table .popup td:focus-within {
+    background: var(--bg-green);
+}
